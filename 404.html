@@ -10,7 +10,11 @@
   /*
    * Env
    */
-  var path_name = window.location.pathname.replace('/\/$/', '');
+  var path_name = window.location.pathname;
+  if (path_name.slice(-1) == '/')
+  {
+    path_name = path_name.substr(0, path_name.length - 1);
+  }
 
 
   /*
